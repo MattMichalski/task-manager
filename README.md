@@ -29,7 +29,7 @@ The canvas engine behind the animated backgrounds (the Matrix themes) was built 
 No build step needed:
 
 1. Clone the repo
-2. Open `Task-Manager/taskManager.html` in a browser
+2. Open `Task-Manager/Task-Manager/taskManager.html` in a browser
    (or serve the folder with any static server, e.g. `npx serve`)
 
 Or try the live demo via GitHub Pages: https://mattmichalski.github.io/task-manager/Task-Manager/Task-Manager/taskManager.html
