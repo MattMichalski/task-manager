@@ -1,0 +1,103 @@
+body{
+    background: linear-gradient(to bottom right , red, white, blue); 
+    background-attachment: fixed;
+
+}
+
+li{
+    list-style: none;
+    font-size:larger;
+    font-weight: bolder;
+}
+
+#wallpaper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+body.halloween .navbar { 
+    background: #000; 
+}
+body.halloween .navbar .btn { 
+    background:  #000;
+    color: #FF7518;
+}
+
+body.halloween .navbar .btn:hover { 
+    background: #FF7518; 
+    color: #000;
+}
+
+body.halloween #subRoot h3{
+    color: #FF7518;
+    text-shadow: 0 0 8px #FF7518;
+}
+body.halloween #displayMessage {
+    color: #FF7518;
+    text-shadow: 0 0 8px #FF7518;
+}
+
+
+body.matrix .navbar { 
+    background: #000; 
+}
+body.matrix .navbar .btn { 
+    background:  #000; 
+    color: #00FF41;
+}
+
+body.matrix .navbar .btn:hover{
+    background: #00FF41;
+    color: #000; 
+}
+
+body.matrix #subRoot h3{
+    color: #00FF41;
+    text-shadow: 0 0 8px #00FF41;
+}
+body.matrix #displayMessage{
+    color: #00FF41;
+    text-shadow: 0 0 8px #00FF41;
+}
+
+body.matrix .charset-picker{
+    display: block;
+}
+
+.charset-picker{
+    display: none;
+}
+
+.pause{
+    display: none;
+}
+
+.play{
+    display: none;
+}
+
+body.matrix .pause{
+    display: block;
+}
+
+body.halloween .pause{
+    display: block;
+}
+
+.katakana{
+    display: none;
+}
+
+.binary{
+    display: none;
+}
+
+body.matrix .katakana{
+    display: block;
+}
+
+body.matrix .binary{
+    display: block;
+}
