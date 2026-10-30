@@ -17,10 +17,23 @@ li{
     z-index: -1;
 }
 
+.navbar-toggler{
+    background: grey;
+}
+
+.navbar-toggler-icon{
+    text-shadow:black;
+}
+
 body.halloween .navbar { 
     background: #000; 
 }
 body.halloween .navbar .btn { 
+    background:  #000;
+    color: #FF7518;
+}
+
+body.halloween .navbar #hammy { 
     background:  #000;
     color: #FF7518;
 }
@@ -46,6 +59,14 @@ body.matrix .navbar {
 body.matrix .navbar .btn { 
     background:  #000; 
     color: #00FF41;
+}
+
+body .navbar #hammy { 
+    outline: white;
+}
+body.matrix .navbar #hammy { 
+    background: #000;
+    color:  #00FF41;
 }
 
 body.matrix .navbar .btn:hover{
