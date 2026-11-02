@@ -10,7 +10,7 @@ there.
 - Add, complete, and delete tasks per board
 - Animated background themes, including the Matrix themes, plus custom top/bottom color pickers
 - "Break it down" AI task breakdown
-- All boards and tasks saved to `localStorage` (auto-save + restore on load)
+- All boards and tasks saved to `localStorage` (restore on load)
 - Quick-week view, food/grocery list, and "today" helpers
 - Theme and background choices persist across sessions
 
