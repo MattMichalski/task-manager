@@ -81,7 +81,7 @@ function weeklyBoard(){
         obj.push(weekObj);
 
         let weekDay = document.createElement("div");
-        weekDay.className = "col-auto m-2 rounded-3";
+        weekDay.className = "col-auto m-2 rounded-3 rawBoard rawBoardName";
         weekDay.id = weekObj.name;
         weekDay.style.background = "lightgrey";
         weekDay.style.border = "4px ridge grey";

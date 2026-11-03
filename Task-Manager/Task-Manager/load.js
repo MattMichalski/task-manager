@@ -39,7 +39,7 @@ function loadDocument(){
 
         
         let newBoard = document.createElement("div");
-            newBoard.className = "col-auto m-2 rounded-3";
+            newBoard.className = "col-auto m-2 rounded-3 rawBoard";
             newBoard.id = board.name;
             newBoard.style.background = "lightgrey";
             newBoard.style.border = "4px ridge grey";
@@ -47,7 +47,7 @@ function loadDocument(){
 
 
         let header = document.createElement("h2");
-            header.className = "p-2";
+            header.className = "p-2 rawBoardName";
             header.style.textDecoration = "underline";
             header.appendChild(document.createTextNode(`${board.name}`));
 
@@ -90,7 +90,7 @@ function loadDocument(){
 
                     let li = document.createElement("li");
                     li.style.background = "white";
-                    li.className = "p-1 list-group-item my-1 rounded-1";
+                    li.className = "p-1 list-group-item my-1 rounded-1 rawTasks";
                     li.innerHTML = value[j];
                     li.id = value[j];
 

@@ -12,17 +12,18 @@ class Board{
         disableButton.disabled = true;
         
         let taskForm = document.createElement("div");
-        taskForm.className = "form-floating p-1";
+        taskForm.className = "form-floating p-1 rawBoard";
         
         let newTaskInput = document.createElement("input");
         newTaskInput.setAttribute("type", "text");
         newTaskInput.setAttribute("placeholder", "New Task");
-        newTaskInput.className = "form-control mb-3";
+        newTaskInput.className = "form-control mb-3 rawTasks";
         newTaskInput.id = "TaskToCreate";
         
         let label = document.createElement("label");
         label.setAttribute("for", "TaskToCreate");
         label.innerHTML = "New Task";
+        label.className = "rawLabel";
 
         let newTaskMade = document.createElement("button");
         newTaskMade.setAttribute("type", "button");
@@ -41,7 +42,7 @@ class Board{
                 let ul = doc.querySelector("ul");
                 let li = document.createElement("li");
                 li.style.background = "white";
-                li.className = "p-1 list-group-item my-1 rounded-1";
+                li.className = "p-1 list-group-item my-1 rounded-1 rawTasks";
                 li.innerHTML = newTaskInput.value;
                 li.id = newTaskInput.value;
 
@@ -137,12 +138,13 @@ class Board{
         let newAiInput = document.createElement("input");
         newAiInput.setAttribute("type", "text");
         newAiInput.setAttribute("placeholder", "Ask Something");
-        newAiInput.className = "form-control mb-3";
+        newAiInput.className = "form-control mb-3 rawTasks";
         newAiInput.id = "AiToCreate";
         
         let aiLabel = document.createElement("Label");
         aiLabel.setAttribute("for", "AiToCreate");
         aiLabel.innerHTML = "New AI";
+        aiLabel.className = "rawLabel";
 
         let newAiTaskMade = document.createElement("button");
         newAiTaskMade.setAttribute("type", "button");
@@ -177,6 +179,7 @@ class Board{
                 })
                 .then(response => {
                     if (response.status === 402){
+                        spinner.remove();
                         return;
                     }
                     return response.text();
@@ -200,7 +203,7 @@ class Board{
                         let ul = doc.querySelector("ul");
                         let li = document.createElement("li");
                         li.style.background = "white";
-                        li.className = "p-1 list-group-item my-1 rounded-1";
+                        li.className = "p-1 list-group-item my-1 rounded-1 rawTasks";
                         li.innerHTML = cleanArray[i];
                         li.id = cleanArray[i];
 

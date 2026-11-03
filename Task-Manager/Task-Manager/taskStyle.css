@@ -25,6 +25,27 @@ li{
     text-shadow:black;
 }
 
+
+
+body.halloween .rawBoard{
+    background: rgba(0,0,0,.55) !important;
+    border-color: rgba(255, 117, 24, .7) !important;
+}
+body.halloween .rawTasks{
+    background: rgba(0,0,0,.7) !important;
+    color: white !important;
+    border-color:  rgba(255,117,24,.55) !important;;
+}
+body.halloween .rawBoardName{
+    color: rgba(255, 117, 24, 1)!important;
+}
+body.halloween .rawNavbar{
+    background: rgba(64,64,64,.55) !important;
+}
+body.halloween .rawLabel{
+    color: white !important;
+}
+
 body.halloween .navbar { 
     background: #000; 
 }
@@ -59,6 +80,28 @@ body.matrix .navbar {
 body.matrix .navbar .btn { 
     background:  #000; 
     color: #00FF41;
+}
+body.matrix .navbar .btn { 
+    background:  #000; 
+    color: #00FF41;
+}
+body.matrix .rawBoard{
+    background: rgba(0,0,0,.55) !important;
+    border-color: rgba(0,255,65,.7) !important;
+}
+body.matrix .rawTasks{
+    background: rgba(0,0,0,.7) !important;
+    color: white !important;
+    border-color:  rgba(0,255,65,.55) !important;;
+}
+body.matrix .rawBoardName{
+    color: #00FF41 !important;
+}
+body.matrix .rawNavbar{
+    background: rgba(64,64,64,.55) !important;
+}
+body.matrix .rawLabel{
+    color: white !important;
 }
 
 body .navbar #hammy { 

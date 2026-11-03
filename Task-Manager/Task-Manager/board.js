@@ -7,7 +7,7 @@ function createBoard(){
     let disableCreateButton = document.querySelector("button");
     disableCreateButton.disabled = true;
     let container = document.createElement("div");
-    container.className = "col-auto mb-5 rounded-4";
+    container.className = "col-auto mb-5 rounded-4 rawBoard";
     container.style.background = "lightgrey";
     container.style.border = "4px ridge grey";
     container.style.boxShadow = "5px 5px 8px black";
@@ -18,11 +18,12 @@ function createBoard(){
     let label = document.createElement("label");
     label.setAttribute("for", "boardName");
     label.innerHTML = "Name your board";
+    label.className = "rawLabel";
 
     let input = document.createElement("input");
     input.setAttribute("type", "text");
     input.setAttribute("placeholder", "Board Name");
-    input.className = "form-control my-2";
+    input.className = "form-control my-2 rawTasks";
     input.id = "boardName";
 
     let create = document.createElement("button");
@@ -54,7 +55,7 @@ function createBoard(){
             board.name = `${isInput}`;
 
             let newBoard = document.createElement("div");
-            newBoard.className = "col-auto m-2 rounded-3";
+            newBoard.className = "col-auto m-2 rounded-3 rawBoard";
             newBoard.id = board.name;
             newBoard.style.background = "lightgrey";
             newBoard.style.border = "4px ridge grey";
@@ -62,7 +63,7 @@ function createBoard(){
 
 
             let header = document.createElement("h1");
-            header.className = "p-2";
+            header.className = "p-2 rawBoardName";
             header.style.textDecoration = "underline";
             header.appendChild(document.createTextNode(`${board.name}`));
 
