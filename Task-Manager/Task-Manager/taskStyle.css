@@ -62,7 +62,7 @@ body.halloween .rawBoard{
     border-color: rgba(255, 117, 24, .7) !important;
 }
 body.halloween .rawTasks{
-    background: rgba(0,0,0,.55) !important;
+    background: rgba(0,0,0,.15) !important;
     color: white !important;
     border-color:  rgba(255,117,24,.55) !important;;
 }
@@ -122,7 +122,7 @@ body.matrix .rawBoard{
     border-color: rgba(0,255,65,.7) !important;
 }
 body.matrix .rawTasks{
-    background: rgba(0,0,0,.275) !important;
+    background: rgba(0,0,0,.15) !important;
     color: white !important;
     border-color:  rgba(0,255,65,.55) !important;;
 }
