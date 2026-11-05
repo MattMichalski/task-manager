@@ -25,6 +25,8 @@ class Board{
         label.innerHTML = "New Task";
         label.className = "rawLabel";
 
+        
+
         let newTaskMade = document.createElement("button");
         newTaskMade.setAttribute("type", "button");
         newTaskMade.className = "btn btn-primary mb-3 mx-1";
@@ -42,28 +44,32 @@ class Board{
                 let ul = doc.querySelector("ul");
                 let li = document.createElement("li");
                 li.style.background = "white";
-                li.className = "p-1 list-group-item my-1 rounded-1 rawTasks";
-                li.innerHTML = newTaskInput.value;
+                li.className = "p-1 list-group-item my-1 rounded-1 task-row rawTasks";
                 li.id = newTaskInput.value;
 
+                let taskText = document.createElement("span");
+                taskText.className = "task-text";
+                taskText.textContent = newTaskInput.value;
+                li.appendChild(taskText);
+                
                 let spanCompleted = document.createElement("span");
+                spanCompleted.className = "task-button";
                 let completedTask = document.createElement("button");
-                completedTask.className = "btn btn-primary ms-5";//mb-3 mx-1
-                completedTask.innerHTML = "&#x2713;";
+                completedTask.className = "btn btn-outline-primary ms-4";//mb-3 mx-1
+                completedTask.innerHTML = "Done";
                 completedTask.onclick = function completeTaskHere(){
                     // needs a for loop to get the task out of the properties "tasks" array
-                    li.style.background = "green";                
-                    li.style.color = "white";
-                    li.style.textDecoration = "line-through";
-                    li.style.fontWeight = "lighter";
+                    taskText.style.background = "green";                
+                    taskText.style.color = "white";
+                    taskText.style.textDecoration = "line-through";
+                    taskText.style.fontWeight = "lighter";
                     completedTask.disabled = true;
                 } 
                 spanCompleted.appendChild(completedTask);
-
                 let spanDeleted = document.createElement("span");
                 let deleteTask = document.createElement("button");
-                deleteTask.className = "btn btn-dark ";//mb-3 mx-1
-                deleteTask.innerHTML = "X";
+                deleteTask.className = "btn btn-outline-danger ms-2";//mb-3 mx-1
+                deleteTask.innerHTML = "Delete";
                 deleteTask.onclick = function deleteTaskHere(){
                     // needs a for loop to get the task out of the properties "tasks" array
                     let taskToBeDeleted = li.id;
@@ -77,10 +83,9 @@ class Board{
                     li.remove();
                     disableButton.disabled = false;
                 }
-                spanDeleted.appendChild(deleteTask);
+                spanCompleted.appendChild(deleteTask);
                 li.appendChild(spanCompleted);
-                li.appendChild(spanDeleted);
-                ul.appendChild(li)
+                ul.appendChild(li);
                 
                 disableButton.disabled = false;
                     
@@ -146,6 +151,8 @@ class Board{
         aiLabel.innerHTML = "New AI";
         aiLabel.className = "rawLabel";
 
+        
+
         let newAiTaskMade = document.createElement("button");
         newAiTaskMade.setAttribute("type", "button");
         newAiTaskMade.className = "btn btn-primary mb-3 mx-1";
@@ -154,7 +161,6 @@ class Board{
         let spinner = document.createElement("div");
         spinner.className = "spinner-grow";
         spinner.setAttribute("role", "status");
-        spinner.textContext = "loading...";
         spinner.style.width = "50px";
         spinner.style.height = "50px";
         spinner.style.color = "#0e7490";
@@ -191,8 +197,9 @@ class Board{
                     let i;
                     for( i = 0; i < responseArray.length; i++){
                         let clean = responseArray[i].replace(/^\d+\.\s*/, "").trim();
-                        if (clean === "")
+                        if (clean === ""){
                             continue;
+                        }
                         cleanArray.push(clean);
                     
                         
@@ -203,28 +210,33 @@ class Board{
                         let ul = doc.querySelector("ul");
                         let li = document.createElement("li");
                         li.style.background = "white";
-                        li.className = "p-1 list-group-item my-1 rounded-1 rawTasks";
-                        li.innerHTML = cleanArray[i];
+                        li.className = "p-1 list-group-item my-1 rounded-1 rawTasks task-row";
                         li.id = cleanArray[i];
 
+                        let taskText = document.createElement("span");
+                        taskText.className = "task-text";
+                        taskText.textContent = cleanArray[i];
+                        li.appendChild(taskText);
+
                         let spanCompleted = document.createElement("span");
+                        spanCompleted.className = "task-button";
                         let completedTask = document.createElement("button");
-                        completedTask.className = "btn btn-primary ms-5";//mb-3 mx-1
-                        completedTask.innerHTML = "&#x2713;";
+                        completedTask.className = "btn btn-outline-primary ms-4";//mb-3 mx-1
+                        completedTask.innerHTML = "Done";
                         completedTask.onclick = function completeTaskHere(){
                     // needs a for loop to get the task out of the properties "tasks" array
-                        li.style.background = "green";                
-                        li.style.color = "white";
-                        li.style.textDecoration = "line-through";
-                        li.style.fontWeight = "lighter";
+                        taskText.style.background = "green";                
+                        taskText.style.color = "white";
+                        taskText.style.textDecoration = "line-through";
+                        taskText.style.fontWeight = "lighter";
                         completedTask.disabled = true;
                     } 
                     spanCompleted.appendChild(completedTask);
 
-                    let spanDeleted = document.createElement("span");
+                   // let spanDeleted = document.createElement("span");
                     let deleteTask = document.createElement("button");
-                    deleteTask.className = "btn btn-dark ";//mb-3 mx-1
-                    deleteTask.innerHTML = "X";
+                    deleteTask.className = "btn btn-outline-danger";//mb-3 mx-1
+                    deleteTask.innerHTML = "Delete";
                     deleteTask.onclick = function deleteTaskHere(){
                     // needs a for loop to get the task out of the properties "tasks" array
                     let taskToBeDeleted = li.id;
@@ -238,9 +250,8 @@ class Board{
                     li.remove();
                     disableButton.disabled = false;
                 }
-                spanDeleted.appendChild(deleteTask);
+                spanCompleted.appendChild(deleteTask);
                 li.appendChild(spanCompleted);
-                li.appendChild(spanDeleted);
                 ul.appendChild(li)
                 
                 disableButton.disabled = false;

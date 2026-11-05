@@ -47,9 +47,8 @@ function groceryList(){
         let deptElement = document.createElement("div");
         deptElement.className = "col-auto m-2 rounded-3 rawBoard rawBoardName";
         deptElement.id = deptList.name;
-        deptElement.style.background = "lightgrey";
+        deptElement.style.background = "rgba(255,255,255,0.55)";
         deptElement.style.border = "4px ridge grey";
-        deptElement.style.boxShadow = "5px 5px 8px";
         let headline = document.createElement("h2");
         headline.innerHTML = `${dept}`;
         headline.style.textDecoration = "underline";

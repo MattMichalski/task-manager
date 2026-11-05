@@ -8,9 +8,8 @@ function createBoard(){
     disableCreateButton.disabled = true;
     let container = document.createElement("div");
     container.className = "col-auto mb-5 rounded-4 rawBoard";
-    container.style.background = "lightgrey";
+    container.style.background = "rgba(255,255,255,0.55)";
     container.style.border = "4px ridge grey";
-    container.style.boxShadow = "5px 5px 8px black";
 
     let form = document.createElement("div");
     form.className = "form-floating p-1";
@@ -57,9 +56,8 @@ function createBoard(){
             let newBoard = document.createElement("div");
             newBoard.className = "col-auto m-2 rounded-3 rawBoard";
             newBoard.id = board.name;
-            newBoard.style.background = "lightgrey";
+            newBoard.style.background = "rgba(255,255,255,0.55)";
             newBoard.style.border = "4px ridge grey";
-            newBoard.style.boxShadow = "5px 5px 8px black"; 
 
 
             let header = document.createElement("h1");

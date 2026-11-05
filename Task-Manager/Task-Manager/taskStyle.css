@@ -1,8 +1,37 @@
 body{
     background: linear-gradient(to bottom right , red, white, blue); 
     background-attachment: fixed;
-
 }
+
+.navbar{
+    position: relative;
+    z-index: 100;
+}
+
+.task-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.task-button{
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.task-text{
+    display: block;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+li.task-row{
+    background: rgba(255, 255, 255, 0.5) !important;
+    backdrop-filter: blur(8px) !important;
+}
+
+
+
 
 li{
     list-style: none;
@@ -29,10 +58,11 @@ li{
 
 body.halloween .rawBoard{
     background: rgba(0,0,0,.55) !important;
+    backdrop-filter: blur(8px) !important;
     border-color: rgba(255, 117, 24, .7) !important;
 }
 body.halloween .rawTasks{
-    background: rgba(0,0,0,.7) !important;
+    background: rgba(0,0,0,.55) !important;
     color: white !important;
     border-color:  rgba(255,117,24,.55) !important;;
 }
@@ -41,6 +71,7 @@ body.halloween .rawBoardName{
 }
 body.halloween .rawNavbar{
     background: rgba(64,64,64,.55) !important;
+    backdrop-filter: blur(8px) !important;
 }
 body.halloween .rawLabel{
     color: white !important;
@@ -87,10 +118,11 @@ body.matrix .navbar .btn {
 }
 body.matrix .rawBoard{
     background: rgba(0,0,0,.55) !important;
+    backdrop-filter: blur(4px) !important;
     border-color: rgba(0,255,65,.7) !important;
 }
 body.matrix .rawTasks{
-    background: rgba(0,0,0,.7) !important;
+    background: rgba(0,0,0,.275) !important;
     color: white !important;
     border-color:  rgba(0,255,65,.55) !important;;
 }
@@ -99,6 +131,7 @@ body.matrix .rawBoardName{
 }
 body.matrix .rawNavbar{
     background: rgba(64,64,64,.55) !important;
+    backdrop-filter: blur(4px) !important;
 }
 body.matrix .rawLabel{
     color: white !important;

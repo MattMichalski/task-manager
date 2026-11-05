@@ -83,9 +83,8 @@ function weeklyBoard(){
         let weekDay = document.createElement("div");
         weekDay.className = "col-auto m-2 rounded-3 rawBoard rawBoardName";
         weekDay.id = weekObj.name;
-        weekDay.style.background = "lightgrey";
+        weekDay.style.background = "rgba(255,255,255,0.55)";
         weekDay.style.border = "4px ridge grey";
-        weekDay.style.boxShadow = "5px 5px 8px";
         let headline = document.createElement("h2");
         headline.innerHTML = `${day}-${month}-${date}`;
         headline.style.textDecoration = "underline";

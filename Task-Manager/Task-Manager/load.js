@@ -41,9 +41,8 @@ function loadDocument(){
         let newBoard = document.createElement("div");
             newBoard.className = "col-auto m-2 rounded-3 rawBoard";
             newBoard.id = board.name;
-            newBoard.style.background = "lightgrey";
+            newBoard.style.background = "rgba(255,255,255,0.55)";
             newBoard.style.border = "4px ridge grey";
-            newBoard.style.boxShadow = "5px 5px 8px black"; 
 
 
         let header = document.createElement("h2");
@@ -90,27 +89,32 @@ function loadDocument(){
 
                     let li = document.createElement("li");
                     li.style.background = "white";
-                    li.className = "p-1 list-group-item my-1 rounded-1 rawTasks";
-                    li.innerHTML = value[j];
+                    li.className = "p-1 list-group-item my-1 rounded-1 rawTasks task-row";
                     li.id = value[j];
 
                     let spanCompleted = document.createElement("span");
+                    spanCompleted.className = "task-button";
+
+                    let taskText = document.createElement("span");
+                        taskText.className = "task-text";
+                        taskText.textContent = value[j];
+                        li.appendChild(taskText);
+
                     let completedTask = document.createElement("button");
-                    completedTask.className = "btn btn-primary ms-5";//mb-3 mx-1
-                    completedTask.innerHTML = "&#x2713;";
+                    completedTask.className = "btn btn-outline-primary ms-1";//mb-3 mx-1
+                    completedTask.innerHTML = "Done";
                     completedTask.onclick = function completeTaskHere(){
-                    li.style.background = "green";                
-                    li.style.color = "white";
-                    li.style.textDecoration = "line-through";
-                    li.style.fontWeight = "lighter";
-                    completedTask.disabled = true;
+                        taskText.style.background = "green";                
+                        taskText.style.color = "white";
+                        taskText.style.textDecoration = "line-through";
+                        taskText.style.fontWeight = "lighter";
+                        completedTask.disabled = true;
                     }
                 spanCompleted.appendChild(completedTask);
 
-                let spanDeleted = document.createElement("span");
                 let deleteTask = document.createElement("button");
-                deleteTask.className = "btn btn-dark ";//mb-3 mx-1
-                deleteTask.innerHTML = "X";
+                deleteTask.className = "btn btn-outline-danger ";//mb-3 mx-1
+                deleteTask.innerHTML = "Delete";
                 deleteTask.onclick = function deleteTaskHere(){
                     // needs a for loop to get the task out of the properties "tasks" array
                     let taskToBeDeleted = li.id;
@@ -123,9 +127,8 @@ function loadDocument(){
                     }
                     li.remove();
                 }
-                spanDeleted.appendChild(deleteTask);
+                spanCompleted.appendChild(deleteTask);
                 li.appendChild(spanCompleted);
-                li.appendChild(spanDeleted);
                 ul.appendChild(li)
                 
             }
