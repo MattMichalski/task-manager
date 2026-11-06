@@ -101,11 +101,9 @@ function loadDocument(){
                         li.appendChild(taskText);
 
                     let completedTask = document.createElement("button");
-                    completedTask.className = "btn btn-outline-primary ms-1";//mb-3 mx-1
+                    completedTask.className = "btn btn-outline-primary ms-2";//mb-3 mx-1
                     completedTask.innerHTML = "Done";
                     completedTask.onclick = function completeTaskHere(){
-                        taskText.style.background = "green";                
-                        taskText.style.color = "white";
                         taskText.style.textDecoration = "line-through";
                         taskText.style.fontWeight = "lighter";
                         completedTask.disabled = true;
@@ -113,7 +111,7 @@ function loadDocument(){
                 spanCompleted.appendChild(completedTask);
 
                 let deleteTask = document.createElement("button");
-                deleteTask.className = "btn btn-outline-danger ";//mb-3 mx-1
+                deleteTask.className = "btn btn-outline-danger ms-2";//mb-3 mx-1
                 deleteTask.innerHTML = "Delete";
                 deleteTask.onclick = function deleteTaskHere(){
                     // needs a for loop to get the task out of the properties "tasks" array

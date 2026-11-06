@@ -8,6 +8,8 @@ body{
     z-index: 100;
 }
 
+
+
 .task-row{
     display: flex;
     align-items: center;
@@ -28,9 +30,12 @@ body{
 li.task-row{
     background: rgba(255, 255, 255, 0.5) !important;
     backdrop-filter: blur(8px) !important;
+    transition: filter 0.2s ease !important;
 }
 
-
+li.task-row:hover{
+    filter: brightness(1.25);
+}
 
 
 li{
@@ -62,7 +67,7 @@ body.halloween .rawBoard{
     border-color: rgba(255, 117, 24, .7) !important;
 }
 body.halloween .rawTasks{
-    background: rgba(0,0,0, 0) !important;
+    background: rgba(0,0,0, .55) !important;
     color: white !important;
     border-color:  rgba(255,117,24,.55) !important;;
 }
@@ -105,6 +110,7 @@ body.halloween #displayMessage {
 }
 
 
+
 body.matrix .navbar { 
     background: #000; 
 }
@@ -121,11 +127,11 @@ body.matrix .navbar .btn {
 
 body.matrix .rawBoard{
     background: rgba(0,0,0,.55) !important;
-    backdrop-filter: blur(4px) !important;
+    backdrop-filter: blur(8px) !important;
     border-color: rgba(0,255,65,.7) !important;
 }
 body.matrix .rawTasks{
-    background: rgba(0,0,0, 0) !important;
+    background: rgba(0,0,0, 0.55) !important;
     color: white !important;
     border-color:  rgba(0,255,65,.55) !important;;
 }
